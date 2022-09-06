@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: row;
+  
+}
+.movie-img{
+    width: 100%;
+    border-radius: 3px;
+}
+
+.movieApp{
+    width:170px;
+    margin: 10px;
+    background-color: #373669;    
+}
+.movie-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:#333c4e;
+    justify-content: space-between;
+    align-items: center;
+    color: wheat;
+}
+
+
+
+    background-color: red;
