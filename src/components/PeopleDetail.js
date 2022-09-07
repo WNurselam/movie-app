@@ -2,7 +2,7 @@ import React from 'react'
 
  const PeopleDetail = () => {
   return (
-    <div>PeopleDetail</div>
+    <div>people details</div>
   )
 }
 export default PeopleDetail;

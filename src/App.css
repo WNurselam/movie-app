@@ -1,28 +1,46 @@
 body{
     display: flex;
     flex-direction: row;
+    background-color:#262626;
+    color: wheat;
   
 }
+
 .movie-img{
     width: 100%;
     border-radius: 3px;
 }
 
+/* Movies.js */
 .movieApp{
     width:170px;
     margin: 10px;
-    background-color: #373669;    
+    background-color: #80868b;    
 }
+
+
+/* MovieList.js */
 .movie-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color:#333c4e;
+    background-color:#262626;
     justify-content: space-between;
     align-items: center;
     color: wheat;
 }
 
+/* MovieDetails.js */
+.Movie-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+}
 
+.about-movie{
+    padding: 10px;
+   
+    list-style-type: none;
+}
 
-    background-color: red;

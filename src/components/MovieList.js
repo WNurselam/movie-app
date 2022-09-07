@@ -13,14 +13,14 @@ const MovieList = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=d5e4ad52cc9c619d62c0ecec694e13c9&language=en-US&page=1`
+          `https://api.themoviedb.org/3/movie/popular?api_key=d5e4ad52cc9c619d62c0ecec694e13c9&language=en-US`
         );
         setMovies(response.data.results);
         setLoading(false);
-        console.log(response.data.results);
-        console.log("here", movies);
+        //console.log(response.data.results);
+        //console.log("here", movies);
       } catch (error) {
-        console.log("Data Error", error);
+        //console.log("Data Error", error);
       }
     };
     fetchApi();
@@ -30,7 +30,7 @@ const MovieList = () => {
     <div className="movie-container">
       {
         movies.length > 0 && movies.map((movie) =>(
-          <Movies movie={movie} key={movie.id}/>
+          <Movies movie={movie} key={movie.id}/> 
         ))
       }
     </div>
