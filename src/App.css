@@ -1,8 +1,8 @@
 body{
     display: flex;
     flex-direction: row;
-    background-color:#262626;
-    color: wheat;
+    background-image: linear-gradient(to right, #141e30, #243b55);
+    color: whitesmoke;
   
 }
 
@@ -19,6 +19,118 @@ body{
 }
 
 
+/* Movies.js  start*/
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card .card-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .card-bg img {
+    transform: scale(1.05);
+}
+
+.card .card-context {
+    position: absolute;
+    height: 50%;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.card:hover .card-context {
+    transform: translateY(0);
+}
+
+.card .card-context .dark-bg {
+    position: absolute;
+   bottom: 0; 
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.card .card-context h2 {
+    position: absolute;
+    color: #fff;
+}
+
+.card .card-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.card:hover .card-context p {
+    opacity: 1;
+}
+
+.card .card-context .avarage{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left:5px;
+    
+}
+
+.card .card-icons {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.card:hover .card-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card .card-icons li {
+    list-style-type: none;
+    cursor: pointer;
+    color:red;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.card .card-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+}
+/* Movies.js End*/
+
+
 /* MovieList.js */
 .movie-container{
     display: flex;
@@ -28,19 +140,51 @@ body{
     justify-content: space-between;
     align-items: center;
     color: wheat;
+    margin: 55px;
 }
 
 /* MovieDetails.js */
 .Movie-detail{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin: 20px;
 }
 
 .about-movie{
     padding: 10px;
-   
     list-style-type: none;
 }
+.actor-page{
+    display: flex;
+    flex-direction: row;
+}
 
+/* Input.js start */
+.input-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;   
+}
+
+.input-container{
+    width:80% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    height: 300px;  
+       
+}
+
+.input-container .search input{
+    width: 750px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+.nav{
+    padding:15px;
+}
