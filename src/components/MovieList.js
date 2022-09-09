@@ -3,17 +3,19 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useData } from "../context/data";
 import Movies from './Movies'
+import Pager from "./Pager";
 
 const MovieList = () => {
   
   const {movies,setMovies,setLoading} = useData();
+  let [page, setPage] = useState(1)
 
   useEffect(() => {
     const fetchApi = async () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=d5e4ad52cc9c619d62c0ecec694e13c9&language=en-US`
+          `https://api.themoviedb.org/3/movie/popular?api_key=d5e4ad52cc9c619d62c0ecec694e13c9&language=en-US&page=${page}`
         );
         setMovies(response.data.results);
         setLoading(false);
@@ -24,7 +26,7 @@ const MovieList = () => {
       }
     };
     fetchApi();
-  }, []);
+  },[page]);
 
   return (
     <div className="movie-container">
@@ -33,6 +35,7 @@ const MovieList = () => {
           <Movies movie={movie} key={movie.id}/> 
         ))
       }
+        <Pager page={page} setPage={setPage}/>
     </div>
   );
 };

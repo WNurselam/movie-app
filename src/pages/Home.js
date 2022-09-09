@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div> 
       <Input/>    
-        <MovieList/>
+      <MovieList/>
     </div>
   )
 }

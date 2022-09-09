@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-
+import Actor from "../components/Actor";
 const MovieDetails = ({ match }) => {
   const [movieDetail, setMovieDetail] = useState();
   const [actors, setActors] = useState([]);
@@ -16,7 +16,7 @@ const MovieDetails = ({ match }) => {
   const fetchApi = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=d5e4ad52cc9c619d62c0ecec694e13c9&language=en-US`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=d5e4ad52cc9c619d62c0ecec694e13c9`
       );
       setMovieDetail(response.data);
       //console.log(response.data);
@@ -31,8 +31,8 @@ const MovieDetails = ({ match }) => {
       const res = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}/credits?api_key=d5e4ad52cc9c619d62c0ecec694e13c9`
       );
-      setActors(res.data.cast.slice(0,6));
-      console.log(res.data);
+      setActors(res.data.cast.slice(0,5));
+      //console.log(actors);
     } catch (error) {
       console.log("Data Error", error);
     }
@@ -54,30 +54,13 @@ const MovieDetails = ({ match }) => {
         <li>{movieDetail && movieDetail.popularity}</li>
       </ul>
 
-      <div className="actor-page">
-        {actors.map((actor) => (
-          <div key={actor.id} className="actor">
-            <img
-              src={`http://image.tmdb.org/t/p/w185/${actor.profile_path}`}
-              alt={movieDetail.title}
-            />
-            <div>
-              <div className="actor-detail">
-                <span>Original Name</span>
-                <p>{actor.original_name}</p>
-              </div>
-              <div className="actor-detail">
-                <span>Character Name</span>
-                <p>{actor.character}</p>
-              </div>
-              <div className="actor-detail">
-                <span>Popularity</span>
-                <p>{actor.popularity}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      {
+        actors.length > 0 && actors.map((actor) =>(
+          <Actor key={actor.id} actor={actor} />
+        ))
+      }
+
+      
     </div>
   );
 };

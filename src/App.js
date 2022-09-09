@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
 import { default as DataProvider } from "./context/data";
+import ActorDetail from "./pages/ActorDetail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/movie/:id" element={<MovieDetails/>}/>
+        <Route path="/person/:id" element={<ActorDetail/>}/>
       </Routes>
     </DataProvider>
   );

@@ -37,12 +37,3 @@ const Movies = ({ movie }) => {
 
 export default Movies;
 
-/*
- <div className="movieApp">
-    
-      <img className="movie-img" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="not" />
-      </Link>
-      <h4>{movie && movie.title}</h4>
-    
-    </div>
-*/
