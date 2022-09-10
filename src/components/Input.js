@@ -1,6 +1,9 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
+import axios from 'axios';
 
 const Input = () => {
+ 
   return (
     <div className='input-page'>
       <div className='input-container'>
@@ -9,7 +12,12 @@ const Input = () => {
         <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
       
       <div className='search'>
-      <input type="text" placeholder='Search movie...'/>
+      <input 
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      type="text" 
+      placeholder='Search movie...'
+      />
       </div>
       </div>
     </div>

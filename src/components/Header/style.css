@@ -1,0 +1,46 @@
+.navbar {
+    padding: 1em 2em;
+    color: #fff;
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
+  }
+  
+  .navbar .innerNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+  }
+  
+  .navbar .menu {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-transform: uppercase;
+  }
+  
+  .navbar .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+    -webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar .menu a:hover {
+    color: #ee7b30ff;
+  }
+  

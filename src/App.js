@@ -1,17 +1,16 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
 import { default as DataProvider } from "./context/data";
 import ActorDetail from "./pages/ActorDetail";
+import { Header } from "./components/Header";
+
 
 function App() {
   return (
     <DataProvider>
-      <nav className="nav">
-        <Link to="/">Anasayfa</Link>
-        <Link to="">Favorites</Link>
-      </nav>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/movie/:id" element={<MovieDetails/>}/>

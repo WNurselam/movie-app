@@ -3,7 +3,8 @@ body{
     flex-direction: row;
     background-image: linear-gradient(to right, #141e30, #243b55);
     color: whitesmoke;
-  
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .movie-img{
@@ -61,8 +62,8 @@ body{
         rgba(0, 0, 0, .4),
         rgba(0, 0, 0, .9)   
     );
-    filter: blur(20px);
-    transition: .2s ease-out;
+    filter: blur(30px);
+    transition: .6s ease-out;
 }
 
 .card .card-context h2 {

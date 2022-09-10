@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import Actor from "../components/Actor";
-const MovieDetails = ({ match }) => {
+const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState();
   const [actors, setActors] = useState([]);
   const { id } = useParams();
