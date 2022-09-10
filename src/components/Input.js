@@ -4,6 +4,9 @@ import axios from 'axios';
 
 const Input = () => {
  const[search setSearch] = useState();
+ useEffect(() => {
+  
+ }, [])
   return (
     <div className='input-page'>
       <div className='input-container'>
