@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 const Input = () => {
- 
+ const[search setSearch] = useState();
   return (
     <div className='input-page'>
       <div className='input-container'>
