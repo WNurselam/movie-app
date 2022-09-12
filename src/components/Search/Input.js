@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
-import { useData } from "../../context/data"; 
+import { useData } from "../../context/data";
+import './style.css'; 
 
 
 const Input = () => {

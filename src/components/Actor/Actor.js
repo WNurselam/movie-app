@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import './style.css'
 
 const Actor = ({actor}) => {
   return (
@@ -12,18 +13,17 @@ const Actor = ({actor}) => {
             />
             </Link>
             <div>
-              <div className="actor-detail">
-                <span>Original Name</span>
+              <div>
                 <p>{actor && actor.original_name}</p>
               </div>
-              <div className="actor-detail">
+              {/* <div className="actor-detail">
                 <span>Character Name</span>
                 <p>{actor && actor.character}</p>
               </div>
               <div className="actor-detail">
                 <span>Popularity</span>
                 <p>{actor&&actor.popularity}</p>
-              </div>
+              </div> */}
             </div>
           </div>
       </div>

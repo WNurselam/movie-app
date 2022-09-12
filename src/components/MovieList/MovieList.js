@@ -1,11 +1,13 @@
 import React from "react";
+import './style.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useData } from "../../context/data";
 import Movies from '../Movies/Movies'
 import Pager from "../Pager/Pager";
+
+
 const MovieList = () => {
-  
   const {movies,setMovies,setLoading} = useData();
   let [page, setPage] = useState(1)
 
