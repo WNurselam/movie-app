@@ -37,7 +37,6 @@ const MovieDetails = () => {
       console.log("Data Error", error);
     }
   };
-
   return (
     <div className="Movie-detail">
       <img

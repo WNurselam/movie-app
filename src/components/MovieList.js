@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useData } from "../context/data";
 import Movies from './Movies'
 import Pager from "./Pager";
-
 const MovieList = () => {
   
   const {movies,setMovies,setLoading} = useData();
@@ -27,7 +26,6 @@ const MovieList = () => {
     };
     fetchApi();
   },[page]);
-
   return (
     <div className="movie-container">
       {
