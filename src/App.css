@@ -171,6 +171,25 @@ body{
     height: 45px;
     border-radius: 10px;
 }
+.input-container .search input:focus{
+    border: none;
+    box-shadow: border-box;
+}
+
+.search-button{
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    position: absolute;
+    margin-left: -62px;
+    margin-top: 1px;
+    border-radius: 12px;
+    height: 42px;
+    border: none;
+    padding: 12px;
+    color:rgb(0, 0, 0);
+}
+.search-button:hover{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
 
 .nav{
     padding:15px;
@@ -198,4 +217,8 @@ body{
   
   .pagination div:hover:not(.active) {
     background-color: #ddd;
+  }
+
+  .logo{
+    text-decoration: none;
   }

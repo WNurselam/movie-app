@@ -2,11 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import Actor from "../components/Actor";
+import Actor from "../components/Actor/Actor";
 const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState();
   const [actors, setActors] = useState([]);
   const { id } = useParams();
+  
+
 
   useEffect(() => {
     fetchApi();
@@ -58,8 +60,6 @@ const MovieDetails = () => {
           <Actor key={actor.id} actor={actor} />
         ))
       }
-
-      
     </div>
   );
 };

@@ -9,7 +9,6 @@ const ActorDetail = () => {
 
   useEffect(() => {
     fetchActor();
-    
   }, [id]);
 
   const fetchActor = async () => {
@@ -23,13 +22,19 @@ const ActorDetail = () => {
       console.log("Data Error", error);
     }
   };
+
   //console.log("here", detailActor);
   return (
     <div className="actor">
       <div>{detailActor && detailActor.name}</div>
       <div>{detailActor && detailActor.place_of_birth}</div>
       <div>{detailActor && detailActor.birthday}</div>
-      <img src={`http://image.tmdb.org/t/p/w185/${detailActor && detailActor.profile_path}`} alt="" />
+      <img
+        src={`http://image.tmdb.org/t/p/w185/${
+          detailActor && detailActor.profile_path
+        }`}
+        alt=""
+      />
       <div>{detailActor && detailActor.biography}</div>
     </div>
   );

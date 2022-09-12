@@ -1,13 +1,11 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
-import { useData } from "../context/data"; 
+import { useData } from "../../context/data"; 
 
 
 const Input = () => {
-
   const {setMovies} = useData();
-
   const [search,setSearch] = useState();
 
   const handleOnChange = (e) => {
@@ -33,10 +31,11 @@ const Input = () => {
           <input
             className='search'
             type='search'
-            placeholder='Search movie title'
+            placeholder='Search movie titles'
             value={search}
             onChange={handleOnChange}
           />
+          <button className='search-button' onClick={searchMovie}>Search</button>
         </form> 
       </div>
       </div>

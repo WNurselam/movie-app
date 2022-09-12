@@ -1,12 +1,12 @@
 import React from 'react'
-import Input from '../components/Input';
-import MovieList from '../components/MovieList'
+import Input from '../components/Search/Input';
+import MovieList from '../components/MovieList/MovieList';
 
 const Home = () => {
   return (
     <div> 
-      <Input/>    
-      <MovieList/>
+      <Input/>  
+     <MovieList/>
     </div>
   )
 }

@@ -6,7 +6,7 @@ export const Header = () => {
     <div className='navbar'>
     <div className='innerNav'>
       <NavLink to='/' className='logo'>
-        TMDB
+        MOVİE APP 🎥
       </NavLink>
       <ul className='menu'>
         <li>

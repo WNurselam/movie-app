@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useData } from "../context/data";
-import Movies from './Movies'
-import Pager from "./Pager";
+import { useData } from "../../context/data";
+import Movies from '../Movies/Movies'
+import Pager from "../Pager/Pager";
 const MovieList = () => {
   
   const {movies,setMovies,setLoading} = useData();
