@@ -1,40 +1,52 @@
-body{
-    display: flex;
-    flex-direction: row;
-    background-image: linear-gradient(to right, #141e30, #243b55);
-    color: whitesmoke;
-    font-family: 'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
+body {
+  display: flex;
+  flex-direction: row;
+  background: #0f0c29;
+  color: whitesmoke;
+  font-family: "Open Sans", sans-serif !important;
+  min-width: 80%;
+  min-width: 1000px;
+  margin: auto;
+  min-height: 100vh;
 }
 
-.movie-img{
-    width: 100%;
-    border-radius: 3px;
+.movie-img {
+  width: 100%;
+  border-radius: 3px;
 }
 
 /* MovieDetails.js */
-.Movie-detail{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 20px;
+.Movie-detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
 }
 
-.about-movie{
-    padding: 10px;
-    list-style-type: none;
+.about-movie {
+  padding: 10px;
+  list-style-type: none;
 }
-.detail-wrapper{
-    display: flex;
-    flex-direction: row;
+.detail-wrapper {
+  display: flex;
+  flex-direction: row;
 }
-.nav{
-    padding:15px;
+.nav {
+  padding: 15px;
 }
 
+.logo {
+  text-decoration: none;
+}
+#root {
+  min-width: 90%;
+  min-height: 100vh;
+  margin: auto;
+}
 
-  .logo{
-    text-decoration: none;
-  }
-
- 
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}

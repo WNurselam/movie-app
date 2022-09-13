@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import axios from "axios";
 import Actor from "../components/Actor/Actor";
 import ReactPlayer from "react-player";
+import './MovieDetail.css';
 
 const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState();

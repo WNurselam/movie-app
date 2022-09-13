@@ -9,7 +9,7 @@ import Pager from "../Pager/Pager";
 
 const MovieList = () => {
   const {movies,setMovies,setLoading} = useData();
-  let [page, setPage] = useState(1)
+  let [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -28,6 +28,7 @@ const MovieList = () => {
     };
     fetchApi();
   },[page]);
+  
   return (
     <div className="movie-container">
       {

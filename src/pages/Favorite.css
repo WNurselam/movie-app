@@ -88,3 +88,8 @@
     transform: translateX(-5px);
   }
   
+  .wrapper-favorite{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }

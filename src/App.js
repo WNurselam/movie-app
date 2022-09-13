@@ -5,7 +5,7 @@ import MovieDetails from "./pages/MovieDetails";
 import { default as DataProvider } from "./context/data";
 import ActorDetail from "./pages/ActorDetail";
 import { Header } from "./components/Header";
-
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/movie/:id" element={<MovieDetails/>}/>
         <Route path="/person/:id" element={<ActorDetail/>}/>
+        <Route path="/favorites" element={<Favorites/>}/>
       </Routes>
     </DataProvider>
   );

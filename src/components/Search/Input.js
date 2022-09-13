@@ -6,9 +6,9 @@ import './style.css';
 
 
 const Input = () => {
-  const {setMovies} = useData();
+  const {setMovies,movies} = useData();
   const [search,setSearch] = useState();
-
+  
   const handleOnChange = (e) => {
     setSearch(e.target.value) 
   }
@@ -18,6 +18,7 @@ const Input = () => {
       `https://api.themoviedb.org/3/search/movie?api_key=d5e4ad52cc9c619d62c0ecec694e13c9&language=en-US&page=1&include_adult=false&query=${search}`
     ).then(res =>setMovies(res.data.results)); 
     setSearch("");
+    
   }
 
   return (
