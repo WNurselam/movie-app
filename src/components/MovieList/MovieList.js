@@ -1,14 +1,13 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useData } from "../../context/data";
-import Movies from '../Movies/Movies'
+import Movies from "../Movies/Movies";
 import Pager from "../Pager/Pager";
 
-
 const MovieList = () => {
-  const {movies,setMovies,setLoading} = useData();
+  const { movies, setMovies, setLoading } = useData();
   let [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -27,16 +26,15 @@ const MovieList = () => {
       }
     };
     fetchApi();
-  },[page]);
-  
+  }, [page]);
+  console.log(movies);
   return (
-    <div className="movie-container">
-      {
-        movies.length > 0 && movies.map((movie) =>(
-          <Movies movie={movie} key={movie.id}/> 
-        ))
-      }
-        <Pager page={page} setPage={setPage}/>
+    <div className="container">
+      <div className="movie-container">
+        {movies.length > 0 &&
+          movies.map((movie) => <Movies movie={movie} key={movie.id} />)}
+        <Pager page={page} setPage={setPage} />
+      </div>
     </div>
   );
 };

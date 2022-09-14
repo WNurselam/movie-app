@@ -1,24 +1,23 @@
-import {NavLink} from 'react-router-dom';
-import './style.css';
+import { NavLink } from "react-router-dom";
+import "./style.css";
 
 export const Header = () => {
   return (
-    <div className='navbar'>
-    <div className='innerNav'>
-      <NavLink to='/' className='logo'>
-        MOVİE APP 🎥
-      </NavLink>
-      <ul className='menu'>
-        <li>
-          <NavLink to='/'>Home</NavLink>
-        </li>
+    <div className="navbar">
+      <div className="innerNav">
+        <NavLink to="/" className="logo">
+          MOVIE PARADISE
+        </NavLink>
+        <ul className="menu">
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
 
-        <li>
-          <NavLink to='/favorites'>Favorites</NavLink>
-        </li>
-      </ul>
+          <li>
+            <NavLink to="/favorites">Favorites</NavLink>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
   );
 };
-
