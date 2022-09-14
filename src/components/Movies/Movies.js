@@ -1,30 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
-import { useData } from '../../context/data';
-
+import './style.scss';
+import { useData } from "../../context/data";
 
 const Movies = ({ movie }) => {
-
-  const {favorite,setFavorite} = useData();
+  const { favorite, setFavorite } = useData();
 
   const addToFavorite = (movie) => {
+    const check = favorite.every((item) => {
+      return item.id !== movie.id;
+    });
 
-   const check = favorite.every((item)=> {
-    return item.id !== movie.id;
-   });
-
-   if(check){
-    setFavorite([...favorite,movie]);
-   }else{
-    alert("Favorilerde var");
-   }
-  }
-
+    if (check) {
+      setFavorite([...favorite, movie]);
+    } else {
+      alert("Favorilerde var");
+    }
+  };
+  
   //console.log(favorite);
   return (
     <div className="card">
-       
       <img
         className="movie-img"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -32,17 +28,20 @@ const Movies = ({ movie }) => {
       />
 
       <div className="card-context">
-        <div className="dark-bg"></div>
         <h2>{movie && movie.title}</h2>
         <div className="avarage">
           <div>{movie && movie.vote_average}</div>
           <i className="bx bxs-star"></i>
         </div>
+        <h1>{movie && movie.title}</h1>
       </div>
       <div className="card-icons">
         <ul>
           <li>
-          <i onClick={() => addToFavorite(movie)}  className="bx bxs-heart"></i>
+            <i
+              onClick={() => addToFavorite(movie)}
+              className="bx bxs-heart"
+            ></i>
           </li>
           <li>
             <Link to={`/movie/${movie.id}`}>
@@ -56,3 +55,10 @@ const Movies = ({ movie }) => {
 };
 
 export default Movies;
+
+/*
+
+  
+
+ 
+*/

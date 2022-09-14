@@ -1,0 +1,121 @@
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2b2374;
+  transition: 300ms;
+  margin: 10px;
+
+  img {
+    transition: 0.6s ease-out;
+  }
+
+
+  .card-context {
+    position: absolute;
+    margin-bottom: 15px;
+    bottom: 0;
+    left: 15px;
+    width: 80%;
+    transition: 0.3s ease-out;
+    opacity: 0;
+
+    h1 {
+
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 10px;
+
+    }
+
+    .avarage {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background-color: #ee7b30ff;
+      border-radius: 5px;
+      padding: 5px;
+      bottom: 0;
+      color: rgb(81, 37, 8);
+      font-weight: 600;
+      bottom: 0;
+      transition: 300ms;
+
+      i {
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .card-icons {
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    opacity: 0;
+    transform: translateX(30px) scale(0.5);
+    transform-origin: top;
+    transition: 0.2s ease-out;
+
+    li {
+      list-style-type: none;
+      cursor: pointer;
+      color: rgb(46, 46, 46);
+      background: #fff;
+      font-size: 22px;
+      margin: 0 0 10px;
+      width: 40px;
+      height: 40px;
+      line-height: 45px;
+      text-align: center;
+      border-radius: 3px;
+      transition: 0.2s ease-out;
+    }
+  }
+}
+
+.card:hover {
+  transition: 300ms;
+  cursor: pointer;
+  border: 1px solid #4235b9;
+  box-shadow: 10px 10px 47px 0px rgba(0, 0, 0, 0.5);
+
+  img {
+    transform: scale(1.09) rotate(2deg);
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+    filter: grayscale(100%) brightness(19%) saturate(0%);
+    -webkit-filter: grayscale(100%) brightness(19%) saturate(0%);
+    -moz-filter: grayscale(100%) brightness(19%) saturate(0%);
+  }
+
+  .card-context {
+    opacity: 1;
+    padding-bottom: 40px;
+    transition: 0.3s ease-out;
+  }
+
+  .avarage {
+    bottom: 15px;
+    transition: 300ms;
+  }
+
+  .card-icons {
+    z-index: 10;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    transform: translateX(0);
+  }
+
+  .card-icons li:hover {
+    background: #ee7b30ff;
+    color: rgb(81, 37, 8);
+    transform: translateX(-5px) scale(1.1);
+
+  }
+
+}

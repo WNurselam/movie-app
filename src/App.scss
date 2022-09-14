@@ -17,22 +17,16 @@ body {
   border-radius: 3px;
 }
 
-/* MovieDetails.js */
-.Movie-detail {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-
 .about-movie {
   padding: 10px;
   list-style-type: none;
 }
+
 .detail-wrapper {
   display: flex;
   flex-direction: row;
 }
+
 .nav {
   padding: 15px;
 }
@@ -40,6 +34,7 @@ body {
 .logo {
   text-decoration: none;
 }
+
 #root {
   min-width: 90%;
   min-height: 100vh;
@@ -47,11 +42,24 @@ body {
 }
 
 a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
 }
 
-.userAuth{
-  position: absolute;
-  display: flex;
+p {
+  color: rgb(133, 133, 133);
+  font-size: 13px;
+  text-align: justify;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }

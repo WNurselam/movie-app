@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useData } from "../../context/data";
-import "./style.css";
+import "./style.scss";
 
 const Input = () => {
   const { setMovies, movies } = useData();
@@ -26,10 +26,12 @@ const Input = () => {
   return (
     <div className="input-page">
       <div className="input-container">
-        <h2>Welcome</h2>
-        <h3>
-          Millions of movies, TV shows and people to discover. Explore now.
-        </h3>
+        <div className="title-container">
+          <div className="input-header">Welcome to Movie Paradise</div>
+          <p>
+            Millions of movies, TV shows and people to discover. Explore now.
+          </p>
+        </div>
 
         <div className="search">
           <form onSubmit={searchMovie}>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useData } from "../context/data";
 import { Link } from "react-router-dom";
-import './Favorite.css'
+import './Favorite.scss'
 
 const Favorites = () => {
   const { favorite, setFavorite } = useData();
