@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 
-
-import Actor from "../components/Actor/Actor";
+import Actor from '../../components/Actor/Actor'
 import './MovieDetail.scss';
 
 const MovieDetails = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import { useData } from "../context/data";
+import { useData } from "../../context/data";
 import { Link } from "react-router-dom";
-import './Favorite.scss'
+import './Favorite.scss';
 
 const Favorites = () => {
   const { favorite, setFavorite } = useData();
@@ -16,9 +16,9 @@ const Favorites = () => {
     setFavorite(remove)
   }
 
-  console.log(favorite);
+  //console.log(favorite);
   return (
-    <div className="wrapper-favorite" > 
+    <div className="favorite-container" > 
      {
       favorite ? favorite.map((movie) => {
         return <div className="card">
@@ -30,7 +30,7 @@ const Favorites = () => {
 
       <div className="card-context">
         <div className="dark-bg"></div>
-        <h2>{movie && movie.title}</h2>
+        <h1>{movie && movie.title}</h1>
         <div className="avarage">
           <div>{movie && movie.vote_average}</div>
           <i className="bx bxs-star"></i>

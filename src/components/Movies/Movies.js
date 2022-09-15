@@ -4,21 +4,8 @@ import './style.scss';
 import { useData } from "../../context/data";
 
 const Movies = ({ movie }) => {
-  const { favorite, setFavorite } = useData();
+  const {addToFavorite } = useData();
 
-  const addToFavorite = (movie) => {
-    const check = favorite.every((item) => {
-      return item.id !== movie.id;
-    });
-
-    if (check) {
-      setFavorite([...favorite, movie]);
-    } else {
-      alert("Favorilerde var");
-    }
-  };
-  
-  //console.log(favorite);
   return (
     <div className="card">
       <img
@@ -28,12 +15,11 @@ const Movies = ({ movie }) => {
       />
 
       <div className="card-context">
-        <h2>{movie && movie.title}</h2>
+        <h1>{movie && movie.title}</h1>
         <div className="avarage">
           <div>{movie && movie.vote_average}</div>
           <i className="bx bxs-star"></i>
         </div>
-        <h1>{movie && movie.title}</h1>
       </div>
       <div className="card-icons">
         <ul>

@@ -2,7 +2,7 @@ import React from 'react'
 import Input from '../components/Search/Input';
 import MovieList from '../components/MovieList/MovieList';
 import { useUserAuth } from '../context/userAuthContext';
-import { useNavigate } from 'react-router';
+import { useNavigate,Link } from 'react-router-dom';
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
@@ -10,7 +10,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       console.log(error.message);
     }
@@ -18,12 +18,19 @@ const Home = () => {
   return (
     <div> 
       <div className='userAuth'>
+        {
+          user ? 
+        <div>
         Hello Welcome <br />
         {user && user.email}
         <button  onClick={handleLogout}>
           Log out
         </button>
         </div>
+        : <Link to="/login">Login</Link>
+        }
+        </div>
+   
       <Input/>  
      <MovieList/>
     </div>

@@ -15,9 +15,17 @@ const Provider = ({ children }) => {
     localStorage.setItem("favorite",JSON.stringify(favorite))
   },[favorite])
 
+  const addToFavorite = (movie) => {
+    const check = favorite.every((item) => {
+      return item.id !== movie.id;
+    });
 
-
-
+    if (check) {
+      setFavorite([...favorite, movie]);
+    } else {
+      alert("Favorilerde var");
+    }
+  };
   return (
     <DataContext.Provider
       value={{
@@ -27,6 +35,7 @@ const Provider = ({ children }) => {
         setLoading,
         favorite,
         setFavorite,
+        addToFavorite
       }}
     >
       {children}

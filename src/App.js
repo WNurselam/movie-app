@@ -1,14 +1,14 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import MovieDetails from "./pages/MovieDetails";
+import MovieDetails from "./pages/MovieDetail/MovieDetails";
 import { default as DataProvider } from "./context/data";
-import ActorDetail from "./pages/ActorDetail";
+import ActorDetail from "./pages/ActorDetail/ActorDetail";
 import { Header } from "./components/Header";
-import Favorites from "./pages/Favorites";
-import Login from "./components/Login";
+import Favorites from "./pages/Favorites/Favorites";
+import Login from "./components/Auth/Login";
 import { UserAuthContextProvider } from "./context/userAuthContext";
-import Register from "./components/Register";
+import Register from "./components/Auth/Register";
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -17,14 +17,7 @@ function App() {
       <DataProvider>
         <Header />
         <Routes>
-          <Route
-            path="/"
-            element={
-            
-                <Home />
-              
-            }
-          />
+          <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
