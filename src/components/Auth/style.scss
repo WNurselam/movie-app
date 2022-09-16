@@ -2,13 +2,15 @@
     position: absolute;
     top:50%;
     left:50%;
-    width:400px;
-    height: 400px;
+    width:450px;
+    height: 45  0px;
     padding:40px;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius:15px;
+    display: flex;
+    flex-direction: column;
 
     h2{
         margin:0 0 30px;
@@ -73,6 +75,13 @@
         span{
             color: orange;
         }
+      }
+
+      .formik-eror{
+        color: orangered;
+        font-size: 15px;
+        margin-top: 0px;
+       
       }
       
       

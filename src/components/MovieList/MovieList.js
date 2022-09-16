@@ -27,7 +27,7 @@ const MovieList = () => {
     };
     fetchApi();
   }, [page]);
-  console.log(movies);
+  //console.log(movies);
   return (
     <div className="container">
       <div className="movie-container">

@@ -23,11 +23,9 @@ const Home = () => {
         <div>
         Hello Welcome <br />
         {user && user.email}
-        <button  onClick={handleLogout}>
-          Log out
-        </button>
+        <i onClick={handleLogout} class='bx bx-log-out bx-md'></i>
         </div>
-        : <Link to="/login">Login</Link>
+        : <Link to="/login"><i className='bx bx-log-in bx-md' ></i></Link>
         }
         </div>
    
