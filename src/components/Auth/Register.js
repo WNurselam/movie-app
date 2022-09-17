@@ -62,9 +62,9 @@ const Register = () => {
           <label>Pasword</label>
         </div>
         <button className="btn-login" type="submit">
-          {" "}
           Kayıt ol
         </button>
+         
       </form>
       <div className="road-sign">
         Alerady have an acount ?{" "}

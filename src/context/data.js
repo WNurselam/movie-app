@@ -1,4 +1,5 @@
 import { createContext, useContext, useState,useEffect } from "react";
+import { toast } from "react-toastify";
 
 
 export const DataContext = createContext();
@@ -22,8 +23,9 @@ const Provider = ({ children }) => {
 
     if (check) {
       setFavorite([...favorite, movie]);
+      toast.success("Added to favorites")
     } else {
-      alert("Favorilerde var");
+    toast("This movie is already in your favourites.");
     }
   };
   return (

@@ -9,7 +9,9 @@ import Favorites from "./pages/Favorites/Favorites";
 import Login from "./components/Auth/Login";
 import { UserAuthContextProvider } from "./context/userAuthContext";
 import Register from "./components/Auth/Register";
-// import ProtectedRoute from "./components/ProtectedRoute";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           <Route path="/person/:id" element={<ActorDetail />} />
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
+        <ToastContainer/>
       </DataProvider>
     </UserAuthContextProvider>
   );
