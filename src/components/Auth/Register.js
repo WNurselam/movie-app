@@ -4,6 +4,8 @@ import { useUserAuth } from "../../context/userAuthContext";
 import "./style.scss";
 import * as yup from "yup";
 import { useFormik } from "formik";
+import { toast } from "react-toastify";
+
 
 let loginSchema = yup.object().shape({
   email: yup.string().email().required("Email is required !"),
@@ -27,10 +29,13 @@ const Register = () => {
     },
     validationSchema: loginSchema,
     onSubmit: (values) => {
-      signUp(values.email, values.password);
+      signUp(values.email, values.password); 
       navigate("/login");
+      toast.success("Registration completed successfully");  
     },
   });
+
+
   return (
     <div className="login-container">
       <h2>Sıgn Up</h2>
@@ -61,10 +66,9 @@ const Register = () => {
           {formik.touched.password && formik.errors.password ? <p className="formik-eror">{formik.errors.password }</p>:null}
           <label>Pasword</label>
         </div>
-        <button className="btn-login" type="submit">
+        <button  className="btn-login" type="submit">
           Kayıt ol
         </button>
-         
       </form>
       <div className="road-sign">
         Alerady have an acount ?{" "}

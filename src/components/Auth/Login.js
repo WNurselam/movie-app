@@ -24,7 +24,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Log In</h2>
-      {error && <div>Hata</div>}
+      {error && <div className="error-message">Incorrect username or password</div>}
       <form onSubmit={handleSubmit}>
         <div className="user-box">
           <input

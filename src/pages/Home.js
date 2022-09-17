@@ -21,16 +21,16 @@ const Home = () => {
         {
           user ? 
         <div>
-        Hello Welcome <br />
-        {user && user.email}
+      
         <i onClick={handleLogout} class='bx bx-log-out bx-md'></i>
         </div>
         : <Link to="/login"><i className='bx bx-log-in bx-md' ></i></Link>
         }
         </div>
-   
       <Input/>  
      <MovieList/>
+   
+     
     </div>
   )
 }

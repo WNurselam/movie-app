@@ -14,6 +14,7 @@ const Pager = ({page, setPage}) => {
         <div className={`${page === 8 ? 'active': ''}`} onClick={() =>setPage(8)}>8</div>
         <div className={`${page === 9 ? 'active': ''}`} onClick={() =>setPage(9)}>9</div>
         <div className={`${page === 10 ? 'active': ''}`} onClick={() =>setPage(10)}>10</div>
+        <div>...</div>
         <div className='arrows' onClick={() =>setPage(++page)}>Next  &raquo;</div>
         
       </div>

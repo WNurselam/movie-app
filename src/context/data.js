@@ -23,9 +23,14 @@ const Provider = ({ children }) => {
 
     if (check) {
       setFavorite([...favorite, movie]);
-      toast.success("Added to favorites")
+      toast.success("Movie added to favorites 👌", {
+        position: toast.POSITION.TOP_RİGHT,   
+      });
     } else {
-    toast("This movie is already in your favourites.");
+      toast.error("This movie is already in your favourites. !", {
+        position: toast.POSITION.TOP_RİGHT ,
+         
+      });
     }
   };
   return (
