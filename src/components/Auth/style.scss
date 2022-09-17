@@ -12,10 +12,13 @@
     display: flex;
     flex-direction: column;
 
-   
+   .error-message{
+    margin: 30px;
+    color: orangered;
+   }
 
     h2{
-        margin:0 0 30px;
+        margin: 0 30px;
         text-transform: uppercase;
         padding:0;
         color:#fff;
@@ -98,6 +101,5 @@
   }
 
   
- 
-  
+
   

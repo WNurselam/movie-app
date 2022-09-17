@@ -21,10 +21,11 @@ const Home = () => {
         {
           user ? 
         <div>
+           {user.email} 
       
-        <i onClick={handleLogout} class='bx bx-log-out bx-md'></i>
+        <button onClick={handleLogout}>Log out</button>
         </div>
-        : <Link to="/login"><i className='bx bx-log-in bx-md' ></i></Link>
+        : <Link to="/login">LOG IN</Link>
         }
         </div>
       <Input/>  

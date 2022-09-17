@@ -5,31 +5,36 @@
   margin: auto;
   background: #130f2e;
   border-radius: 20px;
+
+  div {
+    color: #fff;
+    float: left;
+    padding: 8px 16px;
+    margin: 9px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 300ms;
+    
+    &:active{
+      background-color: #fff;
+      color: #000;
+      font-weight: bolder;
+    }
+  }
+  
+  div:hover:not(.active) {
+    background-color: #ee7b30ff;
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: 300ms;
+  }
 }
 
-.pagination div {
-  color: #fff;
-  float: left;
-  padding: 8px 16px;
-  margin: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 300ms;
-}
 
-.pagination div.active {
-  background-color: #fff;
-  color: #000;
-  font-weight: bolder;
-}
 
-.pagination div:hover:not(.active) {
-  background-color: #ee7b30ff;
-  color: #000;
-  font-weight: bold;
-  transform: scale(1.1);
-  transition: 300ms;
-}
+
+

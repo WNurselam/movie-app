@@ -32,9 +32,8 @@ const Input = () => {
             Millions of movies, TV shows and people to discover. Explore now.
           </p>
         </div>
-
         <div className="search">
-          <form onSubmit={searchMovie}>
+          <form onSubmit={searchMovie}>    
             <input
               className="search"
               type="search"
@@ -42,12 +41,10 @@ const Input = () => {
               value={search}
               onChange={handleOnChange}
             />
-            <button className="search-button" onClick={searchMovie}>
-              Search
-            </button>
+             <span><i onClick={searchMovie} className='bx bx-search bx-md'></i></span>
           </form>
-        </div>
-      </div>
+        </div>   
+      </div>      
     </div>
   );
 };

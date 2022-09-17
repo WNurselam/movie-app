@@ -3,13 +3,14 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 400px;
+  height: 350px;
   overflow: hidden;
   background-image: url(/assets/image/wallpaper.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
+  position: relative;
 
   .input-container {
     width: 100%;
@@ -22,74 +23,59 @@
         rgba(15, 12, 41, 1),
         rgba(48, 43, 99, 0.7),
         rgba(15, 12, 41, 1));
-  }
 
-  .input-container .search input {
-    color: #fff;
-    width: 900px;
-    height: 60px;
-    border-radius: 10px;
-    transition: 300ms;
-    font-size: 20px;
-    padding: 15px 15px;
-    background: rgba(255, 255, 255, 0.17);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: 0.3s ease-in-out;
+        .search input {
+          color: #fff;
+          width: 900px;
+          height: 60px;
+          border-radius: 10px;
+          transition: 300ms;
+          font-size: 20px;
+          padding: 15px 15px;
+          background: rgba(255, 255, 255, 0.17);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(1px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          transition: 0.3s ease-in-out;
 
-  }
+          &:focus{
+            border: none;
+            box-shadow: border-box;
+            color: #fff;
+            outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(7.9px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease-in-out;
+          }
+          
+        }
+        input::placeholder {
+          color: rgb(192, 192, 192);
+          font-size: 18px;
+          font-weight: 300;
+        }
+        .title-container {
+          margin-bottom: 50px;
 
-  input::placeholder {
-    color: rgb(192, 192, 192);
-    font-size: 18px;
-    font-weight: 300;
-  }
-
-  .input-container .search input:focus {
-    border: none;
-    box-shadow: border-box;
-    color: #fff;
-    outline: none;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(7.9px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    transition: 0.3s ease-in-out;
-  }
-
-  input::-webkit-search-cancel-button {
-    display: none;
-  }
-
-  .search-button {
-    background: rgba(15, 12, 41, 1);
-    position: absolute;
-    margin-left: -62px;
-    margin-top: 1px;
-    border-radius: 12px;
-    height: 42px;
-    border: none;
-    padding: 12px;
-    color: #fff;
-    opacity: 0;
-    display: none;
-  }
-
-  .title-container {
-    margin-bottom: 50px;
-  }
-
-  .input-header {
-
-    color: #ee7b30ff;
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 1px 3px 0 #181818, 1px 5px 5px #1b1b1b;
-  }
-
-  p {
-    color: #fff;
-    text-align: center;
-  }
+          .input-header {
+            color: #ee7b30ff;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 1px 3px 0 #181818, 1px 5px 5px #1b1b1b;
+          
+          }
+          p {
+            color: #fff;
+            text-align: center;
+          }
+        }
+        span{
+          position: absolute;
+          margin-top: 12px;
+          margin-left:-50px;
+        }
+  }    
 }
+

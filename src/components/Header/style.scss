@@ -1,7 +1,8 @@
 .navbar {
   color: #fff;
-  padding: 13px 0px;
+  padding: 20px 0px;
   background-image: linear-gradient(to right, #0f0c29, #302b63, #0f0c29);
+ 
 
   .innerNav {
     display: flex;
@@ -24,6 +25,7 @@
       text-decoration: none;
       margin: 0 1em;
       transition: color 0.3s ease-in-out;
+      font-size: 20px;
 
       &:hover {
         color: #ee7b30ff;

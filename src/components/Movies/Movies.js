@@ -15,7 +15,7 @@ const Movies = ({ movie }) => {
       />
 
       <div className="card-context">
-        <h1>{movie && movie.title}</h1>
+        <h1>{movie ? movie.title :"Not Movie"}</h1>
         <div className="avarage">
           <div>{movie && movie.vote_average}</div>
           <i className="bx bxs-star"></i>
@@ -42,9 +42,4 @@ const Movies = ({ movie }) => {
 
 export default Movies;
 
-/*
 
-  
-
- 
-*/

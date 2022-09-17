@@ -24,7 +24,10 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Log In</h2>
-      {error && <div className="error-message">Incorrect username or password</div>}
+      {error ? (
+        <div className="error-message">Incorrect username or password !</div>
+      ):""}
+
       <form onSubmit={handleSubmit}>
         <div className="user-box">
           <input
@@ -55,11 +58,13 @@ const Login = () => {
         </button>
       </form>
       <div className="road-sign">
-      Don't have an account? <span><Link to="/signup">Sign up</Link></span>
+        Don't have an account?{" "}
+        <span>
+          <Link to="/signup">Sign up</Link>
+        </span>
       </div>
     </div>
   );
 };
 
 export default Login;
-
