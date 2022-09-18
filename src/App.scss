@@ -65,15 +65,48 @@ h6 {
 
 .userAuth{
   position: absolute;
-  top: 42px;
+  top: 29px;
   left: 300px;
   padding: 2px 10px;
   
   button{
-    margin-left: 15px;
+    background: none;
+    color:#fff;
+    //border: 2px solid #575555;
+    //background-color: ;
+    padding: 1em 2em;
+    font-size: 1em;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 10px;
+
+    &:hover{
+      border-color:#c4d414;
+      color: #fff;
+      box-shadow: 0 0.5em 0.5em -0.14em #1c1d17;
+      transform: translateY(-0.25em);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
   }
 }
 
 .Toastify__toast-theme--dark {
   background:#130f2e !important;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  i{
+    margin-left: 5px;
+    margin-top: 8px;
+  }
+  
+  
+}
+.login-i{
+  margin-top:8px  
 }

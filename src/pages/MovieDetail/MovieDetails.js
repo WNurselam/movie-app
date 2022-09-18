@@ -101,8 +101,10 @@ const MovieDetails = () => {
       <div className="actor-container">
         <h3>Actors</h3>
         <div className="movie-actor">
-          {actors.length > 0 &&
-            actors.map((actor) => <Actor key={actor.id} actor={actor} />)}
+          {
+          actors.length > 0 &&
+            actors.map((actor) => <Actor key={actor.id} actor={actor} />) 
+          }
         </div>
       </div>
     </div>

@@ -20,12 +20,18 @@ const Home = () => {
       <div className='userAuth'>
         {
           user ? 
-        <div>
+        <div className='user'>
            {user.email} 
       
-        <button onClick={handleLogout}>Log out</button>
+           <i onClick={handleLogout} className='bx bx-log-in-circle bx-md'></i>
         </div>
-        : <Link to="/login">LOG IN</Link>
+
+        :
+        <Link to="/login">
+        <i className='bx bx-log-in-circle bx-md login-i'>
+        
+       </i>
+       </Link>
         }
         </div>
       <Input/>  
