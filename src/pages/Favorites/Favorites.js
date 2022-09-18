@@ -3,6 +3,7 @@ import { useData } from "../../context/data";
 import { Link } from "react-router-dom";
 import './Favorite.scss';
 
+
 const Favorites = () => {
   const { favorite, setFavorite } = useData();
   
@@ -49,9 +50,8 @@ const Favorites = () => {
         </ul>
       </div>
         </div>
-      }):"null"
-     }
-      
+      }):<h1 className="text">You don't have any movies in your favourites.</h1>
+     }   
     </div>
   );
 };
