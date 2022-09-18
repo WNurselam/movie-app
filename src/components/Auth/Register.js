@@ -30,7 +30,7 @@ const Register = () => {
     validationSchema: loginSchema,
     onSubmit: (values) => {
       signUp(values.email, values.password); 
-      navigate("/");
+      navigate("/login");
       toast.success("Registration completed successfully");  
     },
   });
@@ -66,8 +66,8 @@ const Register = () => {
           {formik.touched.password && formik.errors.password ? <p className="formik-eror">{formik.errors.password }</p>:null}
           <label>Pasword</label>
         </div>
-        <button  className="btn-login" type="submit">
-          Kayıt ol
+        <button  className="btn-login"  disabled={!formik.values.email || !formik.values.password} type="submit">
+          Sign Up
         </button>
       </form>
       <div className="road-sign">
