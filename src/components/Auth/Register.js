@@ -30,7 +30,7 @@ const Register = () => {
     validationSchema: loginSchema,
     onSubmit: (values) => {
       signUp(values.email, values.password); 
-      navigate("/login");
+      navigate("/");
       toast.success("Registration completed successfully");  
     },
   });

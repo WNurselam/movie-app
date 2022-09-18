@@ -10,7 +10,7 @@ const Actor = ({actor}) => {
             <Link to={`/person/${actor.id}`}>
             <img
               src={`http://image.tmdb.org/t/p/w185/${actor && actor.profile_path}`}
-              alt={actor.id}
+              alt="No imagee"
             />
             </Link>
             <div>

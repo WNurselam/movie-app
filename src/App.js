@@ -25,7 +25,7 @@ function App() {
           <Route path="/person/:id" element={<ActorDetail />} />
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
-        <ToastContainer theme="dark"/>
+        <ToastContainer className="foo" theme="dark"/>
       </DataProvider> 
     </UserAuthContextProvider>
   );

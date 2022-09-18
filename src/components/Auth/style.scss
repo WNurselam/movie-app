@@ -68,7 +68,6 @@
       }
       .btn-login:hover{
         background: #000000;
-        color:#fff;
         border-radius:7px;
         box-shadow:0 0 5px #03e9f4,
       }
@@ -96,7 +95,7 @@
   .login-container .user-box input:valid ~ label{
     top:-20px;
     left:0;
-    color:#03e9f4;
+    color:#a3dde0;
     font-size:12px;
   }
 
