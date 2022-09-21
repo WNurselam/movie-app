@@ -8,7 +8,7 @@ import Pager from "../Pager/Pager";
 
 const MovieList = () => {
   const { movies, setMovies, setLoading } = useData();
-  let [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchApi = async () => {

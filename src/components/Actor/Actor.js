@@ -30,7 +30,7 @@ const Actor = ({ actor }) => {
           <ul>
             <li>
             <Link to={`/person/${actor.id}`}>
-              <i class="bx bxs-user-detail"></i>
+              <i className="bx bxs-user-detail"></i>
               </Link>
             </li>
           </ul>

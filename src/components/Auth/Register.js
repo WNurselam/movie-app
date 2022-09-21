@@ -1,10 +1,14 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useUserAuth } from "../../context/userAuthContext";
+import { useState } from "react";
 import "./style.scss";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
+import { Icon } from 'react-icons-kit'
+import {eye} from 'react-icons-kit/feather/eye'
+import {eyeOff} from 'react-icons-kit/feather/eyeOff'
 
 
 let loginSchema = yup.object().shape({
@@ -21,6 +25,8 @@ const Register = () => {
 
   const { signUp } = useUserAuth();
   const navigate = useNavigate();
+  const [type, setType]=useState('password');
+  const [icon, setIcon]=useState(eyeOff);
 
   const formik = useFormik({
     initialValues: {
@@ -30,11 +36,21 @@ const Register = () => {
     validationSchema: loginSchema,
     onSubmit: (values) => {
       signUp(values.email, values.password); 
-      navigate("/login");
+      navigate("/");
       toast.success("Registration completed successfully");  
     },
   });
 
+  const handleToggle=()=>{    
+    if(type==='password'){
+      setIcon(eye);      
+      setType('text');
+    }
+    else{
+      setIcon(eyeOff);     
+      setType('password');
+    }
+  }
 
   return (
     <div className="login-container">
@@ -55,7 +71,7 @@ const Register = () => {
         </div>
         <div className="user-box">
           <input
-            type="password"
+            type={type}
             autoComplete="off"
             placeholder="Enter password"
             name="password"
@@ -63,6 +79,7 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
+           <span onClick={handleToggle}><Icon icon={icon} size={20}/></span>
           {formik.touched.password && formik.errors.password ? <p className="formik-eror">{formik.errors.password }</p>:null}
           <label>Pasword</label>
         </div>

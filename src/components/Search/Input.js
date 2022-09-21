@@ -12,6 +12,9 @@ const Input = () => {
     setSearch(e.target.value);
   };
 
+  useEffect(() => {
+    
+  }, [])
 
   const searchMovie = (e) => {
     e.preventDefault();
@@ -22,7 +25,6 @@ const Input = () => {
       .then((res) => setMovies(res.data.results));
     setSearch("");
   };
-
   return (
     <div className="input-page">
       <div className="input-container">
@@ -33,7 +35,7 @@ const Input = () => {
           </p>
         </div>
         <div className="search">
-          <form onSubmit={searchMovie}>    
+          <form onSubmit={searchMovie}>
             <input
               className="search"
               type="search"
@@ -41,10 +43,12 @@ const Input = () => {
               value={search}
               onChange={handleOnChange}
             />
-             <span><i onClick={searchMovie} className='bx bx-search bx-md'></i></span>
+            <span>
+              <i onClick={searchMovie} className="bx bx-search bx-md"></i>
+            </span>
           </form>
-        </div>   
-      </div>      
+        </div>
+      </div>
     </div>
   );
 };

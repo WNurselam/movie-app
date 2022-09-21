@@ -1,17 +1,23 @@
+.login.wrapper{
+  width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .login-container{
     position: absolute;
     top:50%;
     left:50%;
     width:450px;
-    height: 45  0px;
     padding:40px;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius:15px;
-    display: flex;
-    flex-direction: column;
-
    .error-message{
     margin: 30px;
     color: orangered;
@@ -50,6 +56,13 @@
             pointer-events: none;
             transition:.5s;
           }
+
+          span{
+            float: right;
+            position: absolute;
+            right: 10px;
+           
+          }
       }
 
       form .btn-login{
@@ -87,10 +100,9 @@
         font-size: 15px;
         margin-top: 0px;
        
-      }
-      
-      
-  } 
+      }    
+  }
+
 
   .login-container .user-box input:focus ~ label,
   .login-container .user-box input:valid ~ label{
@@ -100,6 +112,7 @@
     font-size:12px;
   }
 
+  
   
 
   

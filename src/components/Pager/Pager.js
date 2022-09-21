@@ -20,5 +20,4 @@ const Pager = ({page, setPage}) => {
       </div>
     )
 }
-
-export default Pager;
+export  default Pager;

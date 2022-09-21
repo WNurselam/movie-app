@@ -12,14 +12,16 @@ import Register from "./components/Auth/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
 function App() {
   return (
     <UserAuthContextProvider>
-      <DataProvider>
-        <Header />
-        <Routes>
+      <DataProvider>  
+      <Header />
+        <Routes>   
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Register />} />
+          <Route path="/signup" element={<Register />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/person/:id" element={<ActorDetail />} />
