@@ -50,7 +50,7 @@ const Favorites = () => {
         </ul>
       </div>
         </div>
-      )): <div>You haven't added any movies to your favorites yet.</div> 
+      )): <div className="not-favorite">You haven't added any movies to your favorites yet.</div> 
      }   
     </div>
   );

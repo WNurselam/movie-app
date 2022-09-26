@@ -30,7 +30,7 @@ function App() {
         <ToastContainer 
         className="foo" 
         theme="dark"
-        autoClose={1500}
+        autoClose={1000}
         />
       </DataProvider> 
     </UserAuthContextProvider>
