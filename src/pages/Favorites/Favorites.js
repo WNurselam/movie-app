@@ -21,8 +21,8 @@ const Favorites = () => {
   return (
     <div className="favorite-container" > 
      {
-      favorite ? favorite.map((movie) => {
-        return <div className="card">
+     favorite && favorite.length > 0 ? favorite.map((movie) => (
+        <div className="card">
          <img
         className="movie-img"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -50,7 +50,7 @@ const Favorites = () => {
         </ul>
       </div>
         </div>
-      }):<h1 className="text">You don't have any movies in your favourites.</h1>
+      )): <div>You haven't added any movies to your favorites yet.</div> 
      }   
     </div>
   );

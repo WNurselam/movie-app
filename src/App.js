@@ -27,10 +27,15 @@ function App() {
           <Route path="/person/:id" element={<ActorDetail />} />
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
-        <ToastContainer className="foo" theme="dark"/>
+        <ToastContainer 
+        className="foo" 
+        theme="dark"
+        autoClose={1500}
+        />
       </DataProvider> 
     </UserAuthContextProvider>
   );
 }
+
 
 export default App;

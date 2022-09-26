@@ -75,6 +75,12 @@
           position: absolute;
           margin-top: 12px;
           margin-left:-50px;
+          
+          i:hover{
+            transform: scale(1.09);
+            color: whitesmoke;
+            cursor: pointer;
+          }
         }
   }    
 }

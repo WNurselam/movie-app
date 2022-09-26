@@ -17,13 +17,10 @@
     font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: 300ms;
+  }
   
-    
-    &:active{
-      background-color: #fff;
-      color: #000;
-      font-weight: bolder;
-    }
+  div.active{
+    background-color: #ee7b30ff;
   }
   
   div:hover:not(.active) {
@@ -34,6 +31,8 @@
     transition: 300ms;
   }
 }
+
+
 
 
 
